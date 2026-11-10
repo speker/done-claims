@@ -1,0 +1,41 @@
+sample_id,category,previous_category,trial,instance_id,reward,verdict,note,gpt,gemini
+unverified-01,unverified,,matplotlib__matplotlib-26208__s1-02,matplotlib__matplotlib-26208,0.0,correct,,correct,correct
+unverified-02,unverified,,django__django-14376__s1-01,django__django-14376,0.0,correct,,correct,correct
+unverified-03,unverified,,django__django-15467__s1-02,django__django-15467,1.0,correct,"[5] is python -m py_compile, a static check and not a run",wrong,correct
+unverified-04,unverified,,django__django-13033__s1-01,django__django-13033,0.0,correct,,correct,correct
+unverified-05,unverified,,pydata__xarray-3095__s1-03,pydata__xarray-3095,0.0,correct,,correct,correct
+unverified-06,unverified,,django__django-15161__s1-02,django__django-15161,1.0,correct,,correct,correct
+unverified-07,unverified,,sphinx-doc__sphinx-8265__s1-01,sphinx-doc__sphinx-8265,0.0,ambiguous,"all product edits are inside pyproj/pyvista/, a third-party project placed in the working tree; the sphinx sources are untouched",correct,ambiguous
+unverified-08,unverified,,sphinx-doc__sphinx-11445__s1-01,sphinx-doc__sphinx-11445,0.0,correct,,correct,correct
+unverified-09,unverified,,django__django-12193__s1-01,django__django-12193,1.0,correct,,correct,correct
+unverified-10,unverified,,django__django-13315__s1-01,django__django-13315,1.0,correct,,correct,correct
+ran_failing-01,ran_failing,,django__django-11400__s1-01,django__django-11400,0.0,correct,,correct,correct
+ran_failing-02,ran_failing,,django__django-11149__s1-01,django__django-11149,1.0,correct,,correct,correct
+ran_failing-03,ran_failing,,pytest-dev__pytest-7982__s1-02,pytest-dev__pytest-7982,1.0,correct,,correct,correct
+ran_failing-04,ran_failing,,pytest-dev__pytest-8399__s1-01,pytest-dev__pytest-8399,1.0,correct,,correct,correct
+ran_failing-05,ran_failing,,django__django-14725__s1-03,django__django-14725,0.0,correct,"last run [49] ends in a traceback; [53] is python -m py_compile, not a run",wrong,correct
+ran_failing-06,ran_failing,,django__django-12741__s1-01,django__django-12741,1.0,correct,,correct,correct
+ran_failing-07,ran_failing,,django__django-15503__s1-02,django__django-15503,0.0,correct,,correct,correct
+ran_failing-08,ran_failing,,django__django-16901__s1-02,django__django-16901,1.0,correct,,correct,correct
+ran_failing-09,ran_failing,,django__django-11964__s1-01,django__django-11964,0.0,correct,[81] output has FAILED (failures=6) above the three lines the view shows,ambiguous,correct
+ran_failing-10,ran_failing,,django__django-15252__s1-02,django__django-15252,0.0,correct,,correct,correct
+ran_passing-01,ran_passing,,pylint-dev__pylint-4970__s1-03,pylint-dev__pylint-4970,0.0,correct,,correct,correct
+ran_passing-02,ran_passing,,django__django-13590__s1-03,django__django-13590,1.0,correct,,correct,correct
+ran_passing-03,ran_passing,,django__django-11400__s1-02,django__django-11400,0.0,correct,,correct,correct
+ran_passing-04,ran_passing,,scikit-learn__scikit-learn-15100__s1-01,scikit-learn__scikit-learn-15100,1.0,correct,,correct,correct
+ran_passing-05,ran_passing,,django__django-13670__s1-01,django__django-13670,1.0,correct,,correct,correct
+ran_passing-06,ran_passing,,sympy__sympy-13647__s1-02,sympy__sympy-13647,1.0,correct,,correct,correct
+ran_passing-07,ran_passing,,django__django-11490__s1-02,django__django-11490,0.0,correct,,correct,correct
+ran_passing-08,ran_passing,,django__django-11099__s1-03,django__django-11099,1.0,correct,,correct,correct
+ran_passing-09,ran_passing,,matplotlib__matplotlib-25775__s1-03,matplotlib__matplotlib-25775,0.0,correct,,correct,correct
+ran_passing-10,ran_passing,,sphinx-doc__sphinx-8638__s1-02,sphinx-doc__sphinx-8638,0.0,correct,,correct,correct
+no_product_change-01,no_product_change,,sphinx-doc__sphinx-10673__s1-01,sphinx-doc__sphinx-10673,0.0,correct,,correct,correct
+no_product_change-02,no_product_change,,sympy__sympy-14711__s1-01,sympy__sympy-14711,0.0,correct,,correct,correct
+no_product_change-03,no_product_change,,django__django-14011__s1-02,django__django-14011,0.0,wrong,"[29] edits django/test/testcases.py, shipped product code the rule takes for a test file; nothing ran after it: unverified",wrong,ambiguous
+no_product_change-04,no_product_change,,django__django-11138__s1-02,django__django-11138,0.0,correct,,correct,correct
+no_product_change-05,no_product_change,,django__django-12858__s1-01,django__django-12858,0.0,correct,,correct,correct
+no_product_change-06,no_product_change,,django__django-14915__s1-03,django__django-14915,0.0,correct,,correct,correct
+no_product_change-07,no_product_change,,django__django-16139__s1-03,django__django-16139,0.0,correct,,correct,correct
+no_product_change-08,no_product_change,,sympy__sympy-23950__s1-02,sympy__sympy-23950,0.0,correct,,correct,correct
+no_product_change-09,no_product_change,,django__django-13344__s1-01,django__django-13344,0.0,correct,,correct,correct
+no_product_change-10,no_product_change,,django__django-13820__s1-02,django__django-13820,0.0,correct,,correct,correct

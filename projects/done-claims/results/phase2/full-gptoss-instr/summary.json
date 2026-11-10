@@ -1,0 +1,256 @@
+{
+  "meta": {
+    "job_name": "full-gptoss-instr",
+    "agents": [
+      {
+        "name": "claude-code",
+        "model_name": "gpt-oss-120b",
+        "api_format": "anthropic_messages",
+        "kwargs": {
+          "version": "2.1.318",
+          "disable_web_search": true
+        },
+        "env": {
+          "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+          "ANTHROPIC_MODEL": "gpt-oss-120b",
+          "ANTHROPIC_DEFAULT_OPUS_MODEL": "gpt-oss-120b",
+          "ANTHROPIC_DEFAULT_SONNET_MODEL": "gpt-oss-120b",
+          "ANTHROPIC_DEFAULT_HAIKU_MODEL": "gpt-oss-120b",
+          "ANTHROPIC_SMALL_FAST_MODEL": "gpt-oss-120b",
+          "CLAUDE_CODE_SUBAGENT_MODEL": "gpt-oss-120b"
+        }
+      }
+    ],
+    "datasets": [
+      {
+        "name": "swe-bench/swe-bench-verified",
+        "ref": "sha256:b934b0cc3dc800fe945eaf9f1623329db97ee3133c706d20644524c7759fb341",
+        "task_names": null,
+        "n_tasks": null
+      }
+    ],
+    "doneclaims": "0.1.0",
+    "code_sha256": "88b6310b8e7de71b0745a283f435d80c965c437ee9eb9452b9d0c1da6ec5f8bf",
+    "git": {
+      "commit": "d9dfed2056ab7fa989567a1f4970c6bd0153476e",
+      "dirty": true
+    },
+    "created_utc": "2026-11-08T11:32:23+00:00"
+  },
+  "status_counts": {
+    "completed": 1469,
+    "exception:AgentTimeoutError": 17,
+    "exception:OutputTokenExceededError": 5,
+    "exception:VerifierTimeoutError": 5,
+    "exception:RewardFileNotFoundError": 2,
+    "exception:NonZeroAgentExitCodeError": 2
+  },
+  "completed": {
+    "all": {
+      "n": 1469,
+      "resolved": 797,
+      "rate": 0.5425459496255957,
+      "ci95": [
+        0.5169921041993811,
+        0.5678778587225531
+      ]
+    },
+    "by_category": {
+      "no_product_change": {
+        "n": 28,
+        "resolved": 0,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.12064330476584563
+        ]
+      },
+      "ran_failing": {
+        "n": 572,
+        "resolved": 324,
+        "rate": 0.5664335664335665,
+        "ci95": [
+          0.5255118332372558,
+          0.6064689382682306
+        ]
+      },
+      "ran_passing": {
+        "n": 675,
+        "resolved": 393,
+        "rate": 0.5822222222222222,
+        "ci95": [
+          0.544653418900088,
+          0.6188604598674712
+        ]
+      },
+      "unverified": {
+        "n": 194,
+        "resolved": 80,
+        "rate": 0.41237113402061853,
+        "ci95": [
+          0.34545766976923553,
+          0.48268755215406933
+        ]
+      }
+    },
+    "ran_passing_by_evidence": {
+      "with_test_run": {
+        "n": 285,
+        "resolved": 187,
+        "rate": 0.656140350877193,
+        "ci95": [
+          0.5992462657660915,
+          0.7088812459954701
+        ]
+      },
+      "script_only": {
+        "n": 390,
+        "resolved": 206,
+        "rate": 0.5282051282051282,
+        "ci95": [
+          0.4786271674641804,
+          0.5772328734413051
+        ]
+      }
+    },
+    "claims_success_by_category": {
+      "ran_failing": {
+        "claims": {
+          "n": 156,
+          "resolved": 90,
+          "rate": 0.5769230769230769,
+          "ci95": [
+            0.49846209447801304,
+            0.6516866853008462
+          ]
+        },
+        "no_claim": {
+          "n": 416,
+          "resolved": 234,
+          "rate": 0.5625,
+          "ci95": [
+            0.5144725616218122,
+            0.6093837153310748
+          ]
+        }
+      },
+      "ran_passing": {
+        "claims": {
+          "n": 330,
+          "resolved": 211,
+          "rate": 0.6393939393939394,
+          "ci95": [
+            0.5862565092433868,
+            0.6893234032246242
+          ]
+        },
+        "no_claim": {
+          "n": 345,
+          "resolved": 182,
+          "rate": 0.527536231884058,
+          "ci95": [
+            0.4748426009365396,
+            0.579623402227855
+          ]
+        }
+      },
+      "unverified": {
+        "claims": {
+          "n": 33,
+          "resolved": 14,
+          "rate": 0.42424242424242425,
+          "ci95": [
+            0.2723559663341021,
+            0.5919273666268755
+          ]
+        },
+        "no_claim": {
+          "n": 161,
+          "resolved": 66,
+          "rate": 0.40993788819875776,
+          "ci95": [
+            0.3369276223509609,
+            0.48714576181178987
+          ]
+        }
+      }
+    },
+    "trials_with_remote_fetch": 47,
+    "stratified_odds_ratios": {
+      "within_instance": [
+        {
+          "comparison": "unverified vs ran_passing",
+          "odds_ratio": 1.0357142857142856,
+          "ci95": [
+            0.4213430756836515,
+            2.5459160089248734
+          ],
+          "informative_strata": 22
+        },
+        {
+          "comparison": "ran_failing vs ran_passing",
+          "odds_ratio": 0.9325842696629211,
+          "ci95": [
+            0.5554267086307969,
+            1.565847314340873
+          ],
+          "informative_strata": 61
+        },
+        {
+          "comparison": "unverified with success claim vs unverified without",
+          "odds_ratio": null,
+          "ci95": null,
+          "informative_strata": 0,
+          "note": "odds ratio is undefined: no discordant information across strata"
+        },
+        {
+          "comparison": "ran_passing with test run vs ran_passing script only",
+          "odds_ratio": 1.6923076923076923,
+          "ci95": [
+            0.5235329574857203,
+            5.47034390957498
+          ],
+          "informative_strata": 12
+        }
+      ]
+    },
+    "sensitivity_without_remote_fetch": {
+      "within_instance": [
+        {
+          "comparison": "unverified vs ran_passing",
+          "odds_ratio": 0.9642857142857142,
+          "ci95": [
+            0.3858966257650338,
+            2.409575198881575
+          ],
+          "informative_strata": 21
+        },
+        {
+          "comparison": "ran_failing vs ran_passing",
+          "odds_ratio": 0.8874999999999997,
+          "ci95": [
+            0.5100677627346681,
+            1.5442188421731917
+          ],
+          "informative_strata": 54
+        },
+        {
+          "comparison": "unverified with success claim vs unverified without",
+          "odds_ratio": null,
+          "ci95": null,
+          "informative_strata": 0,
+          "note": "odds ratio is undefined: no discordant information across strata"
+        },
+        {
+          "comparison": "ran_passing with test run vs ran_passing script only",
+          "odds_ratio": 1.3846153846153846,
+          "ci95": [
+            0.40567070220985596,
+            4.725901458670908
+          ],
+          "informative_strata": 11
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,428 @@
+{
+  "meta": {
+    "dataset": "nebius/SWE-agent-trajectories",
+    "revision": "68195a1450865274106246d0d0296a1d6807b88e",
+    "shards": 12,
+    "trajectories": 80036,
+    "doneclaims": "0.1.0",
+    "code_sha256": "88b6310b8e7de71b0745a283f435d80c965c437ee9eb9452b9d0c1da6ec5f8bf",
+    "python": "3.12.14",
+    "pyarrow": "26.0.1",
+    "git": {
+      "commit": "87c7ace79c0ade94b15dbcf26a03e826ab81e83d",
+      "dirty": true
+    },
+    "created_utc": "2026-11-07T18:06:46+00:00",
+    "seconds": 18.1
+  },
+  "exit_status_counts": {
+    "submitted": 51087,
+    "submitted (exit_context)": 21026,
+    "exit_context": 3568,
+    "early_exit": 3176,
+    "submitted_no_patch": 1066,
+    "submitted (exit_format)": 80,
+    "exit_format": 20,
+    "submitted (exit_cost)": 10,
+    "exit_cost": 3
+  },
+  "submitted": {
+    "all": {
+      "n": 51087,
+      "resolved": 12672,
+      "rate": 0.24804744847025662,
+      "ci95": [
+        0.24432145371543357,
+        0.2518113312427296
+      ]
+    },
+    "by_category": {
+      "no_product_change": {
+        "n": 3794,
+        "resolved": 5,
+        "rate": 0.0013178703215603585,
+        "ci95": [
+          0.0005630426873203124,
+          0.0030815167211685757
+        ]
+      },
+      "ran_failing": {
+        "n": 3634,
+        "resolved": 893,
+        "rate": 0.2457347275729224,
+        "ci95": [
+          0.23201052539252992,
+          0.2599959237837682
+        ]
+      },
+      "ran_passing": {
+        "n": 24616,
+        "resolved": 8381,
+        "rate": 0.3404696132596685,
+        "ci95": [
+          0.3345752657717617,
+          0.34641374412350306
+        ]
+      },
+      "undetermined": {
+        "n": 403,
+        "resolved": 7,
+        "rate": 0.017369727047146403,
+        "ci95": [
+          0.008438811661128452,
+          0.035414779053079784
+        ]
+      },
+      "unverified": {
+        "n": 18640,
+        "resolved": 3386,
+        "rate": 0.18165236051502145,
+        "ci95": [
+          0.1761831746656237,
+          0.18725273385069427
+        ]
+      }
+    },
+    "by_model_and_category": {
+      "swe-agent-llama-405b": {
+        "no_product_change": {
+          "n": 20,
+          "resolved": 0,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "ran_failing": {
+          "n": 32,
+          "resolved": 18,
+          "rate": 0.5625,
+          "ci95": [
+            0.3932559113685198,
+            0.7183466888495963
+          ]
+        },
+        "ran_passing": {
+          "n": 345,
+          "resolved": 201,
+          "rate": 0.5826086956521739,
+          "ci95": [
+            0.5299429315813121,
+            0.633455077911872
+          ]
+        },
+        "undetermined": {
+          "n": 2,
+          "resolved": 0,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.6576197724933469
+          ]
+        },
+        "unverified": {
+          "n": 99,
+          "resolved": 50,
+          "rate": 0.5050505050505051,
+          "ci95": [
+            0.4082317028425853,
+            0.6014920020860226
+          ]
+        }
+      },
+      "swe-agent-llama-70b": {
+        "no_product_change": {
+          "n": 3702,
+          "resolved": 5,
+          "rate": 0.001350621285791464,
+          "ci95": [
+            0.0005770383470008295,
+            0.0031579996934821214
+          ]
+        },
+        "ran_failing": {
+          "n": 3403,
+          "resolved": 830,
+          "rate": 0.24390243902439024,
+          "ci95": [
+            0.22976818825728734,
+            0.2586142266369609
+          ]
+        },
+        "ran_passing": {
+          "n": 23336,
+          "resolved": 7844,
+          "rate": 0.3361330133699006,
+          "ci95": [
+            0.330099608031361,
+            0.342220359801598
+          ]
+        },
+        "undetermined": {
+          "n": 391,
+          "resolved": 7,
+          "rate": 0.017902813299232736,
+          "ci95": [
+            0.008698591966245924,
+            0.03648779467608565
+          ]
+        },
+        "unverified": {
+          "n": 17841,
+          "resolved": 3221,
+          "rate": 0.18053920744352894,
+          "ci95": [
+            0.17496414881373548,
+            0.1862518067157836
+          ]
+        }
+      },
+      "swe-agent-llama-8b": {
+        "no_product_change": {
+          "n": 72,
+          "resolved": 0,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.05065117259645781
+          ]
+        },
+        "ran_failing": {
+          "n": 199,
+          "resolved": 45,
+          "rate": 0.22613065326633167,
+          "ci95": [
+            0.173515802113084,
+            0.2891187074506005
+          ]
+        },
+        "ran_passing": {
+          "n": 935,
+          "resolved": 336,
+          "rate": 0.3593582887700535,
+          "ci95": [
+            0.3292364846762227,
+            0.39063102061017374
+          ]
+        },
+        "undetermined": {
+          "n": 10,
+          "resolved": 0,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.2775327998628892
+          ]
+        },
+        "unverified": {
+          "n": 700,
+          "resolved": 115,
+          "rate": 0.16428571428571428,
+          "ci95": [
+            0.1386826616009353,
+            0.19355332121897706
+          ]
+        }
+      }
+    },
+    "ran_passing_by_evidence": {
+      "with_test_run": {
+        "n": 1159,
+        "resolved": 370,
+        "rate": 0.31924072476272647,
+        "ci95": [
+          0.2930368285351341,
+          0.3466389012716338
+        ]
+      },
+      "script_only": {
+        "n": 23457,
+        "resolved": 8011,
+        "rate": 0.34151852325531823,
+        "ci95": [
+          0.3354762827065929,
+          0.3476126630564915
+        ]
+      },
+      "last_outcome_pass": {
+        "n": 4990,
+        "resolved": 1676,
+        "rate": 0.33587174348697396,
+        "ci95": [
+          0.32289822948860936,
+          0.34909776527674774
+        ]
+      },
+      "last_outcome_unknown": {
+        "n": 19626,
+        "resolved": 6705,
+        "rate": 0.3416386426169367,
+        "ci95": [
+          0.3350351041783151,
+          0.3483041620587623
+        ]
+      }
+    },
+    "claims_success_by_category": {
+      "ran_failing": {
+        "claims": {
+          "n": 881,
+          "resolved": 206,
+          "rate": 0.23382519863791146,
+          "ci95": [
+            0.20706835511848698,
+            0.26289318960266855
+          ]
+        },
+        "no_claim": {
+          "n": 2753,
+          "resolved": 687,
+          "rate": 0.24954594987286596,
+          "ci95": [
+            0.23373719121640302,
+            0.2660526876727875
+          ]
+        }
+      },
+      "ran_passing": {
+        "claims": {
+          "n": 12842,
+          "resolved": 4543,
+          "rate": 0.35376109640242953,
+          "ci95": [
+            0.3455363711308113,
+            0.36207328511160514
+          ]
+        },
+        "no_claim": {
+          "n": 11774,
+          "resolved": 3838,
+          "rate": 0.32597248173942583,
+          "ci95": [
+            0.31756370996221717,
+            0.3344947750897349
+          ]
+        }
+      },
+      "undetermined": {
+        "claims": {
+          "n": 91,
+          "resolved": 3,
+          "rate": 0.03296703296703297,
+          "ci95": [
+            0.011274406767682599,
+            0.0924930694296231
+          ]
+        },
+        "no_claim": {
+          "n": 312,
+          "resolved": 4,
+          "rate": 0.01282051282051282,
+          "ci95": [
+            0.004996636804142638,
+            0.03249514424609821
+          ]
+        }
+      },
+      "unverified": {
+        "claims": {
+          "n": 3096,
+          "resolved": 643,
+          "rate": 0.20768733850129198,
+          "ci95": [
+            0.19376487778543083,
+            0.22233429243193958
+          ]
+        },
+        "no_claim": {
+          "n": 15544,
+          "resolved": 2743,
+          "rate": 0.1764668039114771,
+          "ci95": [
+            0.17055402371846248,
+            0.1825394570300284
+          ]
+        }
+      }
+    },
+    "stratified_odds_ratios": {
+      "within_instance": [
+        {
+          "comparison": "unverified vs ran_passing",
+          "odds_ratio": 0.6819324938157174,
+          "ci95": [
+            0.625194917304423,
+            0.7438191086497394
+          ],
+          "informative_strata": 598
+        },
+        {
+          "comparison": "ran_failing vs ran_passing",
+          "odds_ratio": 0.6498073490502176,
+          "ci95": [
+            0.5644659602248575,
+            0.7480514692355699
+          ],
+          "informative_strata": 434
+        },
+        {
+          "comparison": "unverified with success claim vs unverified without",
+          "odds_ratio": 1.21180066507844,
+          "ci95": [
+            1.042986743933703,
+            1.4079381741192023
+          ],
+          "informative_strata": 371
+        },
+        {
+          "comparison": "ran_passing with test run vs ran_passing script only",
+          "odds_ratio": 0.9941675300879509,
+          "ci95": [
+            0.7800350685154366,
+            1.267082875853571
+          ],
+          "informative_strata": 200
+        }
+      ],
+      "within_instance_and_model": [
+        {
+          "comparison": "unverified vs ran_passing",
+          "odds_ratio": 0.6958569494587548,
+          "ci95": [
+            0.6374731488068405,
+            0.7595879058064697
+          ],
+          "informative_strata": 630
+        },
+        {
+          "comparison": "ran_failing vs ran_passing",
+          "odds_ratio": 0.6591475834140617,
+          "ci95": [
+            0.5715910250471323,
+            0.7601160929438514
+          ],
+          "informative_strata": 446
+        },
+        {
+          "comparison": "unverified with success claim vs unverified without",
+          "odds_ratio": 1.2153012915198147,
+          "ci95": [
+            1.0449562690422673,
+            1.4134153484943477
+          ],
+          "informative_strata": 382
+        },
+        {
+          "comparison": "ran_passing with test run vs ran_passing script only",
+          "odds_ratio": 0.9816700504981634,
+          "ci95": [
+            0.7682229409158627,
+            1.2544224296350586
+          ],
+          "informative_strata": 201
+        }
+      ]
+    }
+  }
+}

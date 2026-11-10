@@ -1,0 +1,409 @@
+{
+  "meta": {
+    "job_name": "p2b-stage2",
+    "agents": [
+      {
+        "name": "claude-code",
+        "model_name": "gpt-oss-120b",
+        "api_format": "anthropic_messages",
+        "kwargs": {
+          "version": "2.1.318",
+          "disable_web_search": true
+        },
+        "env": {
+          "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+          "ANTHROPIC_MODEL": "gpt-oss-120b",
+          "ANTHROPIC_DEFAULT_OPUS_MODEL": "gpt-oss-120b",
+          "ANTHROPIC_DEFAULT_SONNET_MODEL": "gpt-oss-120b",
+          "ANTHROPIC_DEFAULT_HAIKU_MODEL": "gpt-oss-120b",
+          "ANTHROPIC_SMALL_FAST_MODEL": "gpt-oss-120b",
+          "CLAUDE_CODE_SUBAGENT_MODEL": "gpt-oss-120b",
+          "PATH": "/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "DISABLE_AUTOUPDATER": "1",
+          "CLAUDE_CODE_MAX_CONTEXT_TOKENS": "131072"
+        }
+      }
+    ],
+    "datasets": [
+      {
+        "name": "swe-bench/swe-bench-verified",
+        "ref": "sha256:b934b0cc3dc800fe945eaf9f1623329db97ee3133c706d20644524c7759fb341",
+        "task_names": [
+          "swe-bench/astropy__astropy-13236",
+          "swe-bench/astropy__astropy-14365",
+          "swe-bench/astropy__astropy-14369",
+          "swe-bench/astropy__astropy-14539",
+          "swe-bench/astropy__astropy-8707",
+          "swe-bench/django__django-10554",
+          "swe-bench/django__django-10880",
+          "swe-bench/django__django-10914",
+          "swe-bench/django__django-10973",
+          "swe-bench/django__django-11066",
+          "swe-bench/django__django-11087",
+          "swe-bench/django__django-11119",
+          "swe-bench/django__django-11138",
+          "swe-bench/django__django-11149",
+          "swe-bench/django__django-11179",
+          "swe-bench/django__django-11211",
+          "swe-bench/django__django-11400",
+          "swe-bench/django__django-11551",
+          "swe-bench/django__django-11740",
+          "swe-bench/django__django-11790",
+          "swe-bench/django__django-11820",
+          "swe-bench/django__django-11951",
+          "swe-bench/django__django-12125",
+          "swe-bench/django__django-12193",
+          "swe-bench/django__django-12273",
+          "swe-bench/django__django-12308",
+          "swe-bench/django__django-12325",
+          "swe-bench/django__django-12419",
+          "swe-bench/django__django-12663",
+          "swe-bench/django__django-12741",
+          "swe-bench/django__django-12965",
+          "swe-bench/django__django-13028",
+          "swe-bench/django__django-13033",
+          "swe-bench/django__django-13112",
+          "swe-bench/django__django-13158",
+          "swe-bench/django__django-13297",
+          "swe-bench/django__django-13315",
+          "swe-bench/django__django-13363",
+          "swe-bench/django__django-13417",
+          "swe-bench/django__django-13513",
+          "swe-bench/django__django-13551",
+          "swe-bench/django__django-13590",
+          "swe-bench/django__django-13658",
+          "swe-bench/django__django-13809",
+          "swe-bench/django__django-13820",
+          "swe-bench/django__django-13821",
+          "swe-bench/django__django-13925",
+          "swe-bench/django__django-13933",
+          "swe-bench/django__django-14007",
+          "swe-bench/django__django-14017",
+          "swe-bench/django__django-14034",
+          "swe-bench/django__django-14311",
+          "swe-bench/django__django-14315",
+          "swe-bench/django__django-14376",
+          "swe-bench/django__django-14493",
+          "swe-bench/django__django-14539",
+          "swe-bench/django__django-14672",
+          "swe-bench/django__django-14752",
+          "swe-bench/django__django-14771",
+          "swe-bench/django__django-14855",
+          "swe-bench/django__django-14999",
+          "swe-bench/django__django-15022",
+          "swe-bench/django__django-15037",
+          "swe-bench/django__django-15103",
+          "swe-bench/django__django-15161",
+          "swe-bench/django__django-15278",
+          "swe-bench/django__django-15368",
+          "swe-bench/django__django-15382",
+          "swe-bench/django__django-15467",
+          "swe-bench/django__django-15561",
+          "swe-bench/django__django-15629",
+          "swe-bench/django__django-15695",
+          "swe-bench/django__django-15732",
+          "swe-bench/django__django-15957",
+          "swe-bench/django__django-15973",
+          "swe-bench/django__django-16116",
+          "swe-bench/django__django-16136",
+          "swe-bench/django__django-16255",
+          "swe-bench/django__django-16502",
+          "swe-bench/django__django-16612",
+          "swe-bench/django__django-16801",
+          "swe-bench/django__django-16819",
+          "swe-bench/django__django-17084",
+          "swe-bench/django__django-7530",
+          "swe-bench/matplotlib__matplotlib-14623",
+          "swe-bench/matplotlib__matplotlib-23476",
+          "swe-bench/matplotlib__matplotlib-25287",
+          "swe-bench/matplotlib__matplotlib-25775",
+          "swe-bench/matplotlib__matplotlib-26113",
+          "swe-bench/matplotlib__matplotlib-26208",
+          "swe-bench/matplotlib__matplotlib-26291",
+          "swe-bench/mwaskom__seaborn-3069",
+          "swe-bench/mwaskom__seaborn-3187",
+          "swe-bench/pydata__xarray-3095",
+          "swe-bench/pydata__xarray-4629",
+          "swe-bench/pydata__xarray-6721",
+          "swe-bench/pydata__xarray-7229",
+          "swe-bench/pylint-dev__pylint-4551",
+          "swe-bench/pylint-dev__pylint-4970",
+          "swe-bench/pylint-dev__pylint-6386",
+          "swe-bench/pylint-dev__pylint-6528",
+          "swe-bench/pylint-dev__pylint-6903",
+          "swe-bench/pylint-dev__pylint-7080",
+          "swe-bench/pylint-dev__pylint-8898",
+          "swe-bench/pytest-dev__pytest-5840",
+          "swe-bench/pytest-dev__pytest-7236",
+          "swe-bench/pytest-dev__pytest-7432",
+          "swe-bench/pytest-dev__pytest-7521",
+          "swe-bench/pytest-dev__pytest-7982",
+          "swe-bench/scikit-learn__scikit-learn-11578",
+          "swe-bench/scikit-learn__scikit-learn-14141",
+          "swe-bench/scikit-learn__scikit-learn-14496",
+          "swe-bench/sphinx-doc__sphinx-10323",
+          "swe-bench/sphinx-doc__sphinx-10435",
+          "swe-bench/sphinx-doc__sphinx-10449",
+          "swe-bench/sphinx-doc__sphinx-10466",
+          "swe-bench/sphinx-doc__sphinx-10614",
+          "swe-bench/sphinx-doc__sphinx-10673",
+          "swe-bench/sphinx-doc__sphinx-11445",
+          "swe-bench/sphinx-doc__sphinx-11510",
+          "swe-bench/sphinx-doc__sphinx-7454",
+          "swe-bench/sphinx-doc__sphinx-7462",
+          "swe-bench/sphinx-doc__sphinx-7590",
+          "swe-bench/sphinx-doc__sphinx-7748",
+          "swe-bench/sphinx-doc__sphinx-7889",
+          "swe-bench/sphinx-doc__sphinx-7985",
+          "swe-bench/sphinx-doc__sphinx-8056",
+          "swe-bench/sphinx-doc__sphinx-8120",
+          "swe-bench/sphinx-doc__sphinx-8265",
+          "swe-bench/sphinx-doc__sphinx-8269",
+          "swe-bench/sphinx-doc__sphinx-8459",
+          "swe-bench/sphinx-doc__sphinx-8548",
+          "swe-bench/sphinx-doc__sphinx-8551",
+          "swe-bench/sphinx-doc__sphinx-8593",
+          "swe-bench/sphinx-doc__sphinx-8621",
+          "swe-bench/sphinx-doc__sphinx-8638",
+          "swe-bench/sphinx-doc__sphinx-8721",
+          "swe-bench/sphinx-doc__sphinx-9281",
+          "swe-bench/sphinx-doc__sphinx-9320",
+          "swe-bench/sphinx-doc__sphinx-9591",
+          "swe-bench/sphinx-doc__sphinx-9602",
+          "swe-bench/sphinx-doc__sphinx-9658",
+          "swe-bench/sphinx-doc__sphinx-9673",
+          "swe-bench/sphinx-doc__sphinx-9711",
+          "swe-bench/sympy__sympy-13091",
+          "swe-bench/sympy__sympy-13878",
+          "swe-bench/sympy__sympy-20801"
+        ],
+        "n_tasks": null
+      }
+    ],
+    "doneclaims": "0.1.0",
+    "code_sha256": "c0b6a8c4cc16d230c448af82ad223cafbcd0f7d26d579cc3d18747b57c136420",
+    "git": {
+      "commit": "ac8bb9b6fba26494fe4cd017677102f5aa6d310a",
+      "dirty": true
+    },
+    "created_utc": "2026-11-10T14:56:14+00:00"
+  },
+  "status_counts": {
+    "completed": 1103,
+    "exception:AgentTimeoutError": 69,
+    "exception:RewardFileNotFoundError": 3,
+    "exception:VerifierTimeoutError": 1
+  },
+  "completed": {
+    "all": {
+      "n": 1103,
+      "resolved": 556,
+      "rate": 0.5040797824116047,
+      "ci95": [
+        0.4746104905534866,
+        0.5335207552796694
+      ]
+    },
+    "by_category": {
+      "no_product_change": {
+        "n": 33,
+        "resolved": 0,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.10426999754245206
+        ]
+      },
+      "ran_failing": {
+        "n": 201,
+        "resolved": 101,
+        "rate": 0.5024875621890548,
+        "ci95": [
+          0.4339703503253409,
+          0.5709114739194052
+        ]
+      },
+      "ran_passing": {
+        "n": 597,
+        "resolved": 339,
+        "rate": 0.5678391959798995,
+        "ci95": [
+          0.5277932148460314,
+          0.6070177220673156
+        ]
+      },
+      "unverified": {
+        "n": 272,
+        "resolved": 116,
+        "rate": 0.4264705882352941,
+        "ci95": [
+          0.36912218365237826,
+          0.4858669823308205
+        ]
+      }
+    },
+    "ran_passing_by_evidence": {
+      "with_test_run": {
+        "n": 319,
+        "resolved": 191,
+        "rate": 0.5987460815047022,
+        "ci95": [
+          0.5440913739922455,
+          0.6510508491600484
+        ]
+      },
+      "script_only": {
+        "n": 278,
+        "resolved": 148,
+        "rate": 0.5323741007194245,
+        "ci95": [
+          0.4736801745002244,
+          0.5901855182027483
+        ]
+      }
+    },
+    "claims_success_by_category": {
+      "ran_failing": {
+        "claims": {
+          "n": 82,
+          "resolved": 47,
+          "rate": 0.573170731707317,
+          "ci95": [
+            0.46521208028574057,
+            0.6745805113693667
+          ]
+        },
+        "no_claim": {
+          "n": 119,
+          "resolved": 54,
+          "rate": 0.453781512605042,
+          "ci95": [
+            0.36717453925202004,
+            0.5432791454762266
+          ]
+        }
+      },
+      "ran_passing": {
+        "claims": {
+          "n": 291,
+          "resolved": 172,
+          "rate": 0.5910652920962199,
+          "ci95": [
+            0.5337487426818458,
+            0.6460088809983152
+          ]
+        },
+        "no_claim": {
+          "n": 306,
+          "resolved": 167,
+          "rate": 0.545751633986928,
+          "ci95": [
+            0.48974158444194227,
+            0.6006272128990348
+          ]
+        }
+      },
+      "unverified": {
+        "claims": {
+          "n": 51,
+          "resolved": 23,
+          "rate": 0.45098039215686275,
+          "ci95": [
+            0.3226751854937402,
+            0.5861529144963119
+          ]
+        },
+        "no_claim": {
+          "n": 221,
+          "resolved": 93,
+          "rate": 0.42081447963800905,
+          "ci95": [
+            0.3576228400879606,
+            0.4867119183521556
+          ]
+        }
+      }
+    },
+    "trials_with_remote_fetch": 42,
+    "stratified_odds_ratios": {
+      "within_instance": [
+        {
+          "comparison": "unverified vs ran_passing",
+          "odds_ratio": 0.5831277412280702,
+          "ci95": [
+            0.3400465646982148,
+            0.99997470314552
+          ],
+          "informative_strata": 49
+        },
+        {
+          "comparison": "ran_failing vs ran_passing",
+          "odds_ratio": 0.9016189290161895,
+          "ci95": [
+            0.5203922252524585,
+            1.5621230558660424
+          ],
+          "informative_strata": 52
+        },
+        {
+          "comparison": "unverified with success claim vs unverified without",
+          "odds_ratio": 1.037691001697793,
+          "ci95": [
+            0.36732450658219934,
+            2.931475019251413
+          ],
+          "informative_strata": 15
+        },
+        {
+          "comparison": "ran_passing with test run vs ran_passing script only",
+          "odds_ratio": 0.9465116279069766,
+          "ci95": [
+            0.4921490445193251,
+            1.8203515210277654
+          ],
+          "informative_strata": 32
+        }
+      ]
+    },
+    "sensitivity_without_remote_fetch": {
+      "within_instance": [
+        {
+          "comparison": "unverified vs ran_passing",
+          "odds_ratio": 0.5738155515370706,
+          "ci95": [
+            0.3289345299787325,
+            1.00100250103594
+          ],
+          "informative_strata": 46
+        },
+        {
+          "comparison": "ran_failing vs ran_passing",
+          "odds_ratio": 0.9216901408450705,
+          "ci95": [
+            0.525621483234559,
+            1.6162062298201576
+          ],
+          "informative_strata": 50
+        },
+        {
+          "comparison": "unverified with success claim vs unverified without",
+          "odds_ratio": 0.6607809847198641,
+          "ci95": [
+            0.2090219063406317,
+            2.0889270288052897
+          ],
+          "informative_strata": 13
+        },
+        {
+          "comparison": "ran_passing with test run vs ran_passing script only",
+          "odds_ratio": 1.0470752089136488,
+          "ci95": [
+            0.5394743291304408,
+            2.032286679680857
+          ],
+          "informative_strata": 31
+        }
+      ]
+    }
+  }
+}

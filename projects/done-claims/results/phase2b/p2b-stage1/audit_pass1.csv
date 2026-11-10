@@ -1,0 +1,41 @@
+sample_id,category,previous_category,trial,instance_id,reward,verdict,note,gpt,gemini
+unverified-01,unverified,,django__django-15022__s1-03,django__django-15022,0.0,correct,,correct,correct
+unverified-02,unverified,,sphinx-doc__sphinx-8120__s1-03,sphinx-doc__sphinx-8120,1.0,correct,,correct,correct
+unverified-03,unverified,,django__django-13297__s1-01,django__django-13297,0.0,correct,,correct,correct
+unverified-04,unverified,,sphinx-doc__sphinx-10449__s1-02,sphinx-doc__sphinx-10449,0.0,correct,,correct,correct
+unverified-05,unverified,,sphinx-doc__sphinx-9602__s1-03,sphinx-doc__sphinx-9602,0.0,correct,,correct,correct
+unverified-06,unverified,,sphinx-doc__sphinx-9673__s1-03,sphinx-doc__sphinx-9673,1.0,correct,,correct,correct
+unverified-07,unverified,,pydata__xarray-7229__s1-02,pydata__xarray-7229,0.0,correct,,correct,correct
+unverified-08,unverified,,sphinx-doc__sphinx-9711__s1-03,sphinx-doc__sphinx-9711,1.0,correct,,correct,correct
+unverified-09,unverified,,sphinx-doc__sphinx-8459__s1-02,sphinx-doc__sphinx-8459,1.0,correct,,correct,correct
+unverified-10,unverified,,django__django-16116__s1-03,django__django-16116,0.0,correct,"[17] is python -m py_compile, a static check and not a run; gpt read it as a run",wrong,correct
+ran_failing-01,ran_failing,,django__django-16082__s1-03,django__django-16082,1.0,correct,,correct,correct
+ran_failing-02,ran_failing,,django__django-13410__s1-03,django__django-13410,1.0,correct,[65] test run killed with exit 137 and no summary; a tool-reported failure without a pass counts as failed,ambiguous,correct
+ran_failing-03,ran_failing,,sympy__sympy-15599__s1-03,sympy__sympy-15599,0.0,correct,,correct,correct
+ran_failing-04,ran_failing,,django__django-16263__s1-01,django__django-16263,0.0,correct,[73] output has a unittest FAILED (errors=1) summary above the three lines the view shows,ambiguous,correct
+ran_failing-05,ran_failing,,django__django-14373__s1-01,django__django-14373,1.0,correct,,correct,correct
+ran_failing-06,ran_failing,,sphinx-doc__sphinx-9229__s1-01,sphinx-doc__sphinx-9229,0.0,correct,,correct,correct
+ran_failing-07,ran_failing,,sympy__sympy-13480__s1-03,sympy__sympy-13480,1.0,correct,,correct,correct
+ran_failing-08,ran_failing,,pydata__xarray-3095__s1-01,pydata__xarray-3095,1.0,correct,,correct,correct
+ran_failing-09,ran_failing,,sphinx-doc__sphinx-9229__s1-02,sphinx-doc__sphinx-9229,0.0,correct,,correct,correct
+ran_failing-10,ran_failing,,django__django-12713__s1-02,django__django-12713,1.0,correct,,correct,correct
+ran_passing-01,ran_passing,,django__django-16116__s1-02,django__django-16116,1.0,correct,,correct,correct
+ran_passing-02,ran_passing,,sphinx-doc__sphinx-9658__s1-02,sphinx-doc__sphinx-9658,0.0,correct,,correct,correct
+ran_passing-03,ran_passing,,scikit-learn__scikit-learn-12585__s1-01,scikit-learn__scikit-learn-12585,1.0,correct,,correct,correct
+ran_passing-04,ran_passing,,matplotlib__matplotlib-24177__s1-03,matplotlib__matplotlib-24177,0.0,correct,,correct,correct
+ran_passing-05,ran_passing,,sympy__sympy-13615__s1-01,sympy__sympy-13615,1.0,correct,,correct,correct
+ran_passing-06,ran_passing,,django__django-16899__s1-01,django__django-16899,1.0,correct,,correct,correct
+ran_passing-07,ran_passing,,sympy__sympy-19346__s1-03,sympy__sympy-19346,1.0,correct,,correct,correct
+ran_passing-08,ran_passing,,sympy__sympy-13551__s1-03,sympy__sympy-13551,1.0,correct,,correct,correct
+ran_passing-09,ran_passing,,django__django-14089__s1-02,django__django-14089,1.0,correct,,correct,correct
+ran_passing-10,ran_passing,,django__django-13401__s1-03,django__django-13401,1.0,correct,,correct,correct
+no_product_change-01,no_product_change,,scikit-learn__scikit-learn-15100__s1-02,scikit-learn__scikit-learn-15100,0.0,correct,,correct,correct
+no_product_change-02,no_product_change,,sphinx-doc__sphinx-10673__s1-03,sphinx-doc__sphinx-10673,0.0,correct,,correct,correct
+no_product_change-03,no_product_change,,psf__requests-6028__s1-03,psf__requests-6028,0.0,correct,,correct,correct
+no_product_change-04,no_product_change,,scikit-learn__scikit-learn-14629__s1-01,scikit-learn__scikit-learn-14629,0.0,correct,,correct,correct
+no_product_change-05,no_product_change,,django__django-13128__s1-02,django__django-13128,0.0,correct,,correct,correct
+no_product_change-06,no_product_change,,django__django-12858__s1-03,django__django-12858,0.0,correct,,correct,correct
+no_product_change-07,no_product_change,,django__django-13112__s1-03,django__django-13112,0.0,correct,,correct,correct
+no_product_change-08,no_product_change,,sphinx-doc__sphinx-7757__s1-02,sphinx-doc__sphinx-7757,0.0,correct,,correct,correct
+no_product_change-09,no_product_change,,django__django-13820__s1-02,django__django-13820,0.0,correct,,correct,correct
+no_product_change-10,no_product_change,,django__django-11138__s1-02,django__django-11138,0.0,correct,,correct,correct

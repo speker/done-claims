@@ -1,0 +1,41 @@
+sample_id,category,previous_category,trial,instance_id,reward,verdict,note
+unverified-01,unverified,unverified,sympy__sympy-14248__7CrXFXA,sympy__sympy-14248,0.0,correct,
+unverified-02,unverified,unverified,mwaskom__seaborn-3187__vM9RUaN,mwaskom__seaborn-3187,0.0,correct,
+unverified-03,unverified,unverified,pylint-dev__pylint-8898__U8ogs5D,pylint-dev__pylint-8898,0.0,correct,"foo.py, written and removed by the agent, is no longer product and python -m pip is no longer a run; still unverified, now for the right reason"
+unverified-04,unverified,unverified,django__django-11087__ZM27p8P,django__django-11087,0.0,correct,
+unverified-05,unverified,unverified,django__django-13551__ZZAoxXY,django__django-13551,0.0,correct,
+unverified-06,unverified,unverified,django__django-15957__buEV4Cf,django__django-15957,0.0,correct,
+unverified-07,unverified,unverified,django__django-15280__8j5r3YP,django__django-15280,0.0,correct,a stub asgiref/ package and a root tmpapp/ directory counted as product; the last product edit is a real one
+unverified-08,ran_passing,unverified,django__django-14672__C5HdqhD,django__django-14672,1.0,correct,helpers written and removed by the agent are no longer product; now ran_passing
+unverified-09,unverified,unverified,django__django-12143__VEKNSgG,django__django-12143,1.0,correct,
+unverified-10,unverified,unverified,sympy__sympy-13877__dqyP6PK,sympy__sympy-13877,0.0,correct,closing message is raw harmony tokens
+ran_failing-01,ran_failing,ran_failing,django__django-15695__3ihBvcu,django__django-15695,0.0,correct,"targeted tests passed, then the full suite was killed"
+ran_failing-02,ran_failing,ran_failing,django__django-10914__BwwVFZF,django__django-10914,1.0,correct,environment failure: pytest not installed
+ran_failing-03,ran_failing,ran_failing,django__django-13028__xGPAWak,django__django-13028,1.0,correct,"own script printed PASS, then runtests failed for environment reasons"
+ran_failing-04,ran_failing,ran_failing,django__django-14011__G8Ht22w,django__django-14011,0.0,correct,"environment failures, then runtests exited non-zero"
+ran_failing-05,ran_failing,ran_failing,matplotlib__matplotlib-20826__rvCoFVd,matplotlib__matplotlib-20826,0.0,correct,python -m pip counted as a run; the last run failed on import
+ran_failing-06,ran_failing,ran_failing,django__django-11133__X7wJNrm,django__django-11133,1.0,correct,environment failure: pytz missing
+ran_failing-07,ran_failing,ran_failing,django__django-15128__Ky5roHf,django__django-15128,0.0,correct,runtests and a debug script failed after the edit
+ran_failing-08,ran_failing,ran_failing,django__django-13516__fVeMMiL,django__django-13516,1.0,correct,environment failure: asgiref missing
+ran_failing-09,ran_failing,ran_failing,django__django-16116__kpXZvE5,django__django-16116,1.0,correct,environment failures
+ran_failing-10,ran_failing,ran_failing,django__django-13297__epxTrfy,django__django-13297,0.0,correct,environment failure: asgiref missing
+ran_passing-01,ran_passing,ran_passing,django__django-16612__LMYeqhN,django__django-16612,1.0,correct,
+ran_passing-02,ran_passing,ran_passing,psf__requests-2317__B2Qr3dX,psf__requests-2317,0.0,correct,
+ran_passing-03,ran_passing,ran_passing,django__django-14915__afYMu5m,django__django-14915,1.0,correct,
+ran_passing-04,ran_passing,ran_passing,sympy__sympy-16450__LhfqYeF,sympy__sympy-16450,1.0,correct,
+ran_passing-05,ran_passing,ran_passing,django__django-11099__pD7Jgv6,django__django-11099,1.0,correct,
+ran_passing-06,ran_passing,ran_passing,django__django-12155__JPQQ6js,django__django-12155,1.0,correct,
+ran_passing-07,ran_passing,ran_passing,sympy__sympy-24661__9DGUCVo,sympy__sympy-24661,1.0,correct,
+ran_passing-08,ran_passing,ran_passing,django__django-16569__dspu7mS,django__django-16569,1.0,correct,
+ran_passing-09,ran_passing,ran_passing,django__django-16631__utJWcx6,django__django-16631,0.0,correct,
+ran_passing-10,ran_passing,ran_passing,django__django-11848__ihPRgmf,django__django-11848,1.0,correct,
+no_product_change-01,no_product_change,no_product_change,sympy__sympy-13031__ZLcCVjQ,sympy__sympy-13031,0.0,correct,"raw harmony tokens, no edit"
+no_product_change-02,no_product_change,no_product_change,pytest-dev__pytest-6197__UVBg7XE,pytest-dev__pytest-6197,0.0,correct,"only conftest.py, a test file"
+no_product_change-03,no_product_change,no_product_change,sphinx-doc__sphinx-7440__fPYJozc,sphinx-doc__sphinx-7440,0.0,correct,edited docs of an unrelated cloned repository
+no_product_change-04,no_product_change,no_product_change,django__django-10973__yekAhTH,django__django-10973,0.0,correct,"raw harmony tokens, no edit"
+no_product_change-05,no_product_change,no_product_change,scikit-learn__scikit-learn-14629__eSGjK4m,scikit-learn__scikit-learn-14629,0.0,correct,"raw harmony tokens, no edit"
+no_product_change-06,no_product_change,no_product_change,django__django-13112__WxoeZi4,django__django-13112,0.0,correct,
+no_product_change-07,no_product_change,no_product_change,django__django-13925__47A4Lm7,django__django-13925,0.0,correct,
+no_product_change-08,ran_failing,no_product_change,mwaskom__seaborn-3069__sqbxyWT,mwaskom__seaborn-3069,0.0,correct,"edits passed with `path` are read; last product edit 103, failing pytest after it; now ran_failing"
+no_product_change-09,no_product_change,no_product_change,django__django-11433__x3LX83Z,django__django-11433,0.0,correct,"raw harmony tokens, no edit"
+no_product_change-10,no_product_change,no_product_change,pydata__xarray-7393__6K6UuJ2,pydata__xarray-7393,0.0,correct,"raw harmony tokens, no edit"

@@ -1,0 +1,41 @@
+sample_id,category,previous_category,shard,row,instance_id,model_name,target,verdict,note
+unverified-01,unverified,unverified,2,5254,jjhelmus__nmrglue-216,swe-agent-llama-70b,False,correct,egg-info files counted as product code; category unaffected
+unverified-02,unverified,unverified,3,2092,iterative__dvc-2068,swe-agent-llama-70b,False,correct,
+unverified-03,unverified,unverified,2,1149,iterative__dvc-4747,swe-agent-llama-70b,False,correct,
+unverified-04,unverified,unverified,8,5782,SAP__python-pyodata-232,swe-agent-llama-70b,False,correct,runs happened only before the last product edit
+unverified-05,unverified,unverified,3,4362,cltk__cltk-661,swe-agent-llama-70b,False,correct,rejected edit at step 4 correctly ignored
+unverified-06,unverified,unverified,9,1102,encode__starlette-105,swe-agent-llama-70b,False,correct,
+unverified-07,unverified,unverified,6,2989,oduwsdl__MementoEmbed-131,swe-agent-llama-8b,False,correct,
+unverified-08,unverified,unverified,3,4382,cltk__cltk-661,swe-agent-llama-70b,False,correct,
+unverified-09,unverified,unverified,9,5059,iterative__dvc-5378,swe-agent-llama-70b,False,correct,rejected edit at step 17 correctly ignored
+unverified-10,unverified,unverified,6,4918,tcalmant__ipopo-120,swe-agent-llama-70b,True,correct,
+ran_failing-01,ran_failing,ran_failing,2,3610,celery__py-amqp-357,swe-agent-llama-70b,True,correct,last run failed on a missing module unrelated to the fix
+ran_failing-02,ran_failing,ran_failing,2,2427,googleapis__python-containeranalysis-251,swe-agent-llama-70b,False,correct,last run failed on missing credentials
+ran_failing-03,ran_failing,ran_failing,0,2071,iterative__dvc-9212,swe-agent-llama-70b,False,correct,"Ran 0 tests and ""FAILED (errors=12)"" both read as failing evidence"
+ran_failing-04,ran_failing,ran_failing,4,1040,mhostetter__galois-219,swe-agent-llama-8b,True,correct,closing message says the fix was verified after a ValueError
+ran_failing-05,ran_failing,ran_failing,3,5178,pydantic__pydantic-4383,swe-agent-llama-70b,False,correct,pytest 12 failed / 2437 passed; agent called the failures unrelated
+ran_failing-06,ran_failing,ran_failing,4,4276,pydantic__pydantic-6194,swe-agent-llama-70b,True,correct,
+ran_failing-07,ran_failing,ran_failing,11,5211,astropy__astroquery-2444,swe-agent-llama-70b,True,correct,
+ran_failing-08,ran_failing,ran_failing,0,4152,marshmallow-code__apispec-811,swe-agent-llama-70b,False,correct,script did not exist
+ran_failing-09,ran_failing,ran_failing,6,4632,pydantic__pydantic-3946,swe-agent-llama-70b,False,correct,
+ran_failing-10,ran_failing,ran_failing,11,183,redis__redis-py-2894,swe-agent-llama-8b,False,correct,script did not exist
+ran_passing-01,ran_passing,ran_passing,0,5995,oasis-open__cti-python-stix2-342,swe-agent-llama-70b,True,correct,silent run counted as no failure signal
+ran_passing-02,ran_passing,ran_passing,7,3869,pyout__pyout-48,swe-agent-llama-70b,False,correct,tests passed only after the agent edited the failing test
+ran_passing-03,ran_passing,ran_passing,8,6034,algorand__pyteal-29,swe-agent-llama-8b,False,correct,
+ran_passing-04,ran_passing,ran_passing,2,5310,kangasta__fdbk-77,swe-agent-llama-70b,False,correct,unittest OK
+ran_passing-05,ran_passing,ran_passing,7,4050,sunpy__sunpy-soar-24,swe-agent-llama-70b,True,correct,
+ran_passing-06,ran_passing,ran_passing,2,2890,pydantic__pydantic-4884,swe-agent-llama-70b,True,correct,
+ran_passing-07,ran_passing,ran_passing,8,5342,networkx__networkx-3848,swe-agent-llama-70b,True,correct,ad-hoc test file run as a script; output showed 1 passed
+ran_passing-08,ran_passing,ran_passing,6,423,pydantic__pydantic-4012,swe-agent-llama-70b,True,correct,
+ran_passing-09,ran_passing,ran_passing,1,2862,spiral-project__ihatemoney-1039,swe-agent-llama-70b,False,correct-ambiguous,script caught an exception and printed it before the success line
+ran_passing-10,ran_passing,ran_passing,7,5625,pydantic__pydantic-4484,swe-agent-llama-70b,False,correct,
+undetermined-01,unverified,unverified,5,2052,tensorly__tensorly-221,swe-agent-llama-70b,False,correct,mv renames now read as writes; no run after them
+undetermined-02,ran_passing,ran_passing,10,52,mwouts__jupytext-368,swe-agent-llama-70b,False,correct,edit with inner fences now parsed; script ran cleanly after the edit
+undetermined-03,undetermined,undetermined,7,4451,SymbiFlow__FPGA-Tool-Performance-Visualization-Library-24,swe-agent-llama-70b,False,correct,only a CSV written by a script run; no edit to attribute
+undetermined-04,undetermined,undetermined,1,212,RDFLib__rdflib-2160,swe-agent-llama-70b,False,correct,only an output file written by a script run
+undetermined-05,undetermined,undetermined,8,6628,iterative__dvc-8882,swe-agent-llama-70b,False,correct,only files written by dvc during a script run
+undetermined-06,undetermined,undetermined,10,3326,antirotor__speedcopy-6,swe-agent-llama-70b,False,correct,only files written by a script run
+undetermined-07,ran_passing,undetermined,8,2366,iterative__dvc-9689,swe-agent-llama-70b,False,correct-ambiguous,rm of dvc.lock and dvc.yaml now read as a write; both are generated files counted as product
+undetermined-08,no_product_change,no_product_change,1,836,level12__morphi-6,swe-agent-llama-70b,False,correct,build artifacts no longer counted as product code
+undetermined-09,no_product_change,no_product_change,8,2958,repobee__repobee-csvgrades-23,swe-agent-llama-70b,False,correct,build artifacts no longer counted as product code
+undetermined-10,no_product_change,no_product_change,8,1795,fitbenchmarking__fitbenchmarking-664,swe-agent-llama-70b,False,correct,build artifacts no longer counted as product code

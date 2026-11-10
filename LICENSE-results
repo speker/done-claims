@@ -1,0 +1,5 @@
+The results in this repository (files under `projects/done-claims/results/`: CSV and JSON files with
+per-trajectory and per-trial measurements, audit verdicts and summaries) are licensed under the Creative
+Commons Attribution 4.0 International License (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/
+
+Phase 1 results are derived from nebius/SWE-agent-trajectories, which is licensed CC BY 4.0.

@@ -1,0 +1,41 @@
+sample_id,category,previous_category,shard,row,instance_id,model_name,target,verdict,note
+unverified-01,unverified,unverified,1,1295,pypa__cibuildwheel-1138,swe-agent-llama-70b,True,correct,
+unverified-02,unverified,unverified,1,6542,nylas__nylas-python-80,swe-agent-llama-70b,False,correct,
+unverified-03,unverified,unverified,2,5888,readthedocs__sphinx-hoverxref-195,swe-agent-llama-8b,False,correct,
+unverified-04,unverified,unverified,5,17,devopsspiral__KubeLibrary-124,swe-agent-llama-70b,True,correct,
+unverified-05,unverified,unverified,0,1229,scikit-hep__cabinetry-396,swe-agent-llama-70b,False,correct,
+unverified-06,unverified,unverified,6,6479,witchard__grole-21,swe-agent-llama-70b,True,correct,
+unverified-07,unverified,unverified,8,4908,craigjmidwinter__total-connect-client-174,swe-agent-llama-70b,False,correct,
+unverified-08,unverified,unverified,5,6343,ARMmbed__greentea-263,swe-agent-llama-8b,False,correct,
+unverified-09,unverified,unverified,0,1949,googleapis__python-api-core-546,swe-agent-llama-70b,True,correct,
+unverified-10,unverified,unverified,0,3996,ithaka__apiron-8,swe-agent-llama-70b,False,correct,
+ran_failing-01,ran_failing,ran_failing,1,4301,3YOURMIND__django-migration-linter-258,swe-agent-llama-70b,True,correct,
+ran_failing-02,ran_failing,ran_failing,3,323,zulip__zulip-terminal-1350,swe-agent-llama-8b,False,correct,
+ran_failing-03,ran_failing,ran_failing,3,5567,WIPACrepo__iceprod-339,swe-agent-llama-70b,False,correct,
+ran_failing-04,ran_failing,ran_failing,2,321,stravalib__stravalib-309,swe-agent-llama-70b,True,correct,
+ran_failing-05,ran_failing,ran_failing,2,2429,googleapis__python-containeranalysis-251,swe-agent-llama-70b,False,correct,
+ran_failing-06,ran_failing,ran_failing,4,1044,mhostetter__galois-219,swe-agent-llama-8b,True,correct,
+ran_failing-07,ran_failing,ran_failing,7,6041,RDFLib__rdflib-2112,swe-agent-llama-70b,False,correct,
+ran_failing-08,ran_failing,ran_failing,2,93,pydantic__pydantic-860,swe-agent-llama-70b,False,correct,agent-created root-level helper file counted as product code
+ran_failing-09,ran_failing,ran_failing,4,4286,pydantic__pydantic-6194,swe-agent-llama-70b,True,correct,
+ran_failing-10,ran_failing,ran_failing,9,1938,redis__redis-py-2583,swe-agent-llama-70b,False,correct,agent-created root-level mock server counted as product code
+ran_passing-01,ran_passing,ran_passing,0,322,bihealth__biomedsheets-23,swe-agent-llama-70b,False,correct,unittest found 0 tests; the later pytest run passed
+ran_passing-02,ran_passing,ran_passing,3,5121,pydantic__pydantic-4329,swe-agent-llama-70b,True,correct,
+ran_passing-03,ran_passing,ran_passing,11,2200,sdispater__pendulum-593,swe-agent-llama-70b,True,correct,
+ran_passing-04,ran_passing,ran_passing,10,6301,numpy__numpydoc-283,swe-agent-llama-70b,True,correct,
+ran_passing-05,ran_passing,ran_passing,8,6,rosscdh__mkdocs-markdownextradata-plugin-29,swe-agent-llama-70b,False,correct,
+ran_passing-06,ran_passing,ran_passing,0,655,just-work__fffw-100,swe-agent-llama-70b,False,correct,custom 'Test completed successfully' line read as no failure signal
+ran_passing-07,ran_passing,ran_passing,1,126,NCAS-CMS__cfdm-158,swe-agent-llama-70b,True,correct,
+ran_passing-08,ran_passing,ran_passing,9,289,mozman__svgwrite-109,swe-agent-llama-70b,True,correct,
+ran_passing-09,ran_passing,ran_passing,7,6265,goerz__zip_files-5,swe-agent-llama-70b,False,correct,
+ran_passing-10,ran_passing,ran_passing,11,4267,lidatong__dataclasses-json-394,swe-agent-llama-70b,False,correct,
+undetermined-01,undetermined,undetermined,6,1794,iterative__dvc-4066,swe-agent-llama-70b,False,correct,setup.py change has no visible command behind it
+undetermined-02,undetermined,undetermined,10,5908,iterative__dvc-3895,swe-agent-llama-70b,False,correct,only .dvc files written by dvc during script runs
+undetermined-03,undetermined,undetermined,6,3602,DCC-Lab__RayTracing-192,swe-agent-llama-70b,False,correct,product file rewritten by a Python script; such writes are not modelled
+undetermined-04,undetermined,undetermined,3,1976,dlce-eva__python-nexus-27,swe-agent-llama-405b,False,correct,only a downloaded data file
+undetermined-05,undetermined,undetermined,8,3534,dougthor42__pynuget-41,swe-agent-llama-8b,False,correct,only a database file written by a script run
+undetermined-06,undetermined,undetermined,2,4030,nipype__pydra-261,swe-agent-llama-70b,False,correct,only cache files written by a script run
+undetermined-07,undetermined,undetermined,1,196,RDFLib__rdflib-2160,swe-agent-llama-70b,False,correct,only an output file written by a script run
+undetermined-08,undetermined,undetermined,4,6394,astropy__sphinx-automodapi-142,swe-agent-llama-70b,False,correct,version file written by the build tool
+undetermined-09,ran_failing,undetermined,8,6028,algorand__pyteal-29,swe-agent-llama-8b,False,correct,"rm now read as a write; product file deleted, then a failing run"
+undetermined-10,undetermined,undetermined,5,2662,getnikola__nikola-3504,swe-agent-llama-70b,False,correct,only build-cache files written by the tool

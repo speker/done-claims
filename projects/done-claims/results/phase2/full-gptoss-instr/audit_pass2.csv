@@ -1,0 +1,41 @@
+sample_id,category,previous_category,trial,instance_id,reward,verdict,note
+unverified-01,unverified,,django__django-16454__muHEmr7,django__django-16454,0.0,correct,
+unverified-02,unverified,,scikit-learn__scikit-learn-13439__pLr9zBn,scikit-learn__scikit-learn-13439,1.0,wrong,"the agent ran /tmp/test_len.py by path twice after the edit, both runs failed; a script called by path was not read as a run; should be ran_failing"
+unverified-03,unverified,,django__django-15278__EV7khjz,django__django-15278,0.0,correct,the agent wrote a migration for an unrelated app; product by the rules
+unverified-04,unverified,,django__django-15957__buEV4Cf,django__django-15957,0.0,correct,
+unverified-05,unverified,,pydata__xarray-4687__XpBEfCh,pydata__xarray-4687,0.0,correct,
+unverified-06,unverified,,sympy__sympy-14248__7CrXFXA,sympy__sympy-14248,0.0,correct,
+unverified-07,unverified,,astropy__astropy-14309__PKD8RRh,astropy__astropy-14309,1.0,correct,"py_compile after the edit is a static check, not a run"
+unverified-08,unverified,,sympy__sympy-13878__imKiaYA,sympy__sympy-13878,0.0,correct,
+unverified-09,unverified,,pylint-dev__pylint-7080__waDzxop,pylint-dev__pylint-7080,0.0,correct,a stub tomlkit/ package counted as product; the last product edit is a real one
+unverified-10,unverified,,django__django-12276__cYBXJfb,django__django-12276,1.0,wrong,"runtests.py ran twice inside bash -lc ""..."" after the edit; the wrapper was not unwrapped; the second run hit the Bash time limit"
+ran_failing-01,ran_failing,,matplotlib__matplotlib-23299__tfyyPec,matplotlib__matplotlib-23299,0.0,correct,
+ran_failing-02,ran_failing,,sphinx-doc__sphinx-7910__a43yM9h,sphinx-doc__sphinx-7910,1.0,correct,"environment failures, then pytest collection errors"
+ran_failing-03,ran_failing,,django__django-11532__gMhbSfP,django__django-11532,0.0,correct,
+ran_failing-04,ran_failing,,astropy__astropy-12907__5GJz7Hy,astropy__astropy-12907,1.0,correct,
+ran_failing-05,ran_failing,,django__django-16950__FhdBB65,django__django-16950,1.0,correct,
+ran_failing-06,ran_failing,,django__django-15277__iCcrXqw,django__django-15277,1.0,correct,
+ran_failing-07,ran_failing,,scikit-learn__scikit-learn-25931__z28hw3R,scikit-learn__scikit-learn-25931,0.0,correct,
+ran_failing-08,ran_failing,,matplotlib__matplotlib-20826__AhHRMev,matplotlib__matplotlib-20826,0.0,correct,
+ran_failing-09,ran_failing,,sympy__sympy-20428__GbMU6q7,sympy__sympy-20428,0.0,correct,"own script passed, then pytest was not installed; failing by the rules"
+ran_failing-10,ran_failing,,matplotlib__matplotlib-25479__XyrYsjh,matplotlib__matplotlib-25479,0.0,correct,
+ran_passing-01,ran_passing,,django__django-12304__BvSCfgj,django__django-12304,1.0,correct,
+ran_passing-02,ran_passing,,matplotlib__matplotlib-23299__QEE3VWM,matplotlib__matplotlib-23299,1.0,correct,
+ran_passing-03,ran_passing,,sphinx-doc__sphinx-9229__mSRRWx4,sphinx-doc__sphinx-9229,0.0,correct,
+ran_passing-04,ran_passing,,sympy__sympy-15976__XJNP7gU,sympy__sympy-15976,1.0,correct,
+ran_passing-05,ran_passing,,astropy__astropy-13033__GjSRCjf,astropy__astropy-13033,0.0,correct,last script prints the new error message the fix introduces; exit 0
+ran_passing-06,ran_passing,,pytest-dev__pytest-7236__U2rpEpy,pytest-dev__pytest-7236,1.0,correct,pytest -q printed '1 skipped' without bars; read as no failure signal under these rules
+ran_passing-07,ran_passing,,django__django-15563__HLLotkA,django__django-15563,1.0,correct,
+ran_passing-08,ran_passing,,sympy__sympy-16886__A4tTsZB,sympy__sympy-16886,1.0,correct,
+ran_passing-09,ran_passing,,sympy__sympy-13031__ckLdJRm,sympy__sympy-13031,0.0,correct,
+ran_passing-10,ran_passing,,sympy__sympy-22914__4N6K87i,sympy__sympy-22914,1.0,correct,
+no_product_change-01,no_product_change,,django__django-13343__YjL6ZFv,django__django-13343,0.0,correct,fix written into the reply instead of the file
+no_product_change-02,no_product_change,,django__django-10914__NvHjHD4,django__django-10914,0.0,correct,docs only
+no_product_change-03,no_product_change,,pytest-dev__pytest-6197__UVBg7XE,pytest-dev__pytest-6197,0.0,correct,
+no_product_change-04,no_product_change,,sphinx-doc__sphinx-7440__fPYJozc,sphinx-doc__sphinx-7440,0.0,correct,
+no_product_change-05,no_product_change,,django__django-11734__RRdcSyS,django__django-11734,0.0,correct,Write with `path` to a test file only
+no_product_change-06,no_product_change,,scikit-learn__scikit-learn-14629__eSGjK4m,scikit-learn__scikit-learn-14629,0.0,correct,
+no_product_change-07,no_product_change,,django__django-13513__S4XFk2k,django__django-13513,0.0,correct,
+no_product_change-08,no_product_change,,scikit-learn__scikit-learn-25232__avdBwGH,scikit-learn__scikit-learn-25232,0.0,correct,fix written into the reply instead of the file
+no_product_change-09,no_product_change,,pydata__xarray-7393__6K6UuJ2,pydata__xarray-7393,0.0,correct,
+no_product_change-10,no_product_change,,sympy__sympy-12489__AWJz4Eh,sympy__sympy-12489,0.0,correct,

@@ -1,6 +1,6 @@
 # done-claims
 
-Working name; the public name is not decided. Status on 5 November 2026: phase 1 is done; the phase 2 full run (option 2 below, open models only) started at 22:07 and is expected to finish in the morning of 6 November.
+The name started as a working name and became the public one on 10 November 2026 (see the end of this file). Status on 5 November 2026: phase 1 is done; the phase 2 full run (option 2 below, open models only) started at 22:07 and is expected to finish in the morning of 6 November.
 
 Coding agents often say a task is finished without running anything after their last change. At least a dozen open-source hooks now try to stop this by checking the agent's closing message or its session log. The nine whose READMEs were read on 5 November 2026 report detection fixtures or false-positive tuning. None of them reports whether a "done" claim without evidence is actually wrong more often. This project measures that first and only then decides whether a tool is worth building.
 
@@ -16,7 +16,7 @@ The closest prior work, checked on the same day:
 | [Nari-Ab/agent-roast](https://github.com/Nari-Ab/agent-roast) | blocks weakened tests and CI gates | rule hits on 12,645 commits in 166 repositories |
 | [safety-research/impossiblebench](https://github.com/safety-research/impossiblebench) | measures how often agents exploit tests on impossible tasks | cheating rate per model |
 
-Phase 1 is the measurement on 51,087 public SWE-agent submissions in [RESULTS.md](RESULTS.md). The classifier is deterministic and has 86 unit tests. The agent that wrote it audited it row by row on two random samples of 40 submissions; no human has reviewed those rows yet.
+Phase 1 is the measurement on 51,087 public SWE-agent submissions in [RESULTS.md](RESULTS.md). The classifier is deterministic and had 86 unit tests at that point (91 on 10 November). The agent that wrote it audited it row by row on two random samples of 40 submissions; no human has reviewed those rows yet.
 
 Phase 2 had three options, and the second was chosen:
 
@@ -89,7 +89,7 @@ Secondary analyses, reported whatever their direction: the stage-1 estimate over
 
 Code fixed for phase 2b: SHA-256 of the `doneclaims` sources `7710e6c1255ae8a879b033df6f3643dc896d9bea07b3bebb9b837b28a031674d`, as computed by `doneclaims.study.code_digest`. A change after this point is listed here with its reason, and every phase 2b number is reported with the code version it came from.
 
-Two things are out of scope. One is another hook that matches closing-message language, since in the SWE-agent runs that language did not separate failed submissions from the rest. The other is redistributing trajectory text or putting OpenAI, Anthropic or Google outputs into any dataset.
+Two things are out of scope. One is another hook that matches closing-message language, since in the SWE-agent runs that language did not separate failed submissions from the rest. The other is redistributing trajectory text or putting OpenAI, Anthropic or Google outputs into any dataset. Clarified on 10 November 2026 (decision record #36): "dataset" here means training data; the published result files include the auditors' and jurors' verdicts and short notes, which are audit records.
 
 Decisions for Serkan, taken on 10 November 2026 (decision record #35):
 

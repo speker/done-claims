@@ -2,7 +2,7 @@
 license: cc-by-4.0
 language:
 - en
-pretty_name: done-claims - coding agents that submit without running anything after their last edit
+pretty_name: done-claims - coding agents that submit without running a test or script after their last edit
 task_categories:
 - tabular-classification
 size_categories:
@@ -33,16 +33,20 @@ configs:
 
 # done-claims
 
-In 18,640 of 47,293 submitted SWE-agent runs that changed product code (39.4%), the agent ran nothing after its
-last edit. Those submissions resolved the issue 18.2% of the time, against 34.0% for submissions whose last run
+In 18,640 of 47,293 submitted SWE-agent runs that changed product code (39.4%), the agent ran no test or script
+after its last edit. Those submissions resolved the issue 18.2% of the time, against 34.0% for submissions whose last run
 after the edit showed no failure signal; comparing attempts at the same issue, the Mantel-Haenszel odds ratio is
-0.68 (95% CI 0.63 to 0.74, 598 issues). A pre-registered rerun with Claude Code driven by gpt-oss-120b on SWE-bench
-Verified gives 0.55 (95% CI 0.37 to 0.82, 73 issues).
+0.68 (95% CI 0.63 to 0.74, 598 issues). A rerun with Claude Code driven by gpt-oss-120b on SWE-bench Verified,
+with its hypothesis and decision rule set in a plan dated before it started, gives 0.55 (95% CI 0.37 to 0.82, 73
+issues) over the 147 issues where the agent skipped verification at least once. An earlier run with the same agent
+and model was inconclusive: 1.04 (0.42 to 2.55, 22 issues).
 
 This dataset holds the measurements behind those numbers, one row per trajectory or trial, with its category, run
-counts and outcome. It contains no trajectory or transcript text. The classifier, the pre-registration and every
+counts and outcome. It contains no trajectory or transcript text. The classifier, the dated plan and every
 number with its source are at [github.com/speker/done-claims](https://github.com/speker/done-claims)
-(`projects/done-claims/RESULTS.md` and `PLAN.md`).
+(`projects/done-claims/RESULTS.md` and `PLAN.md`). The write-up is the article
+[Test ya da betik çalıştırmadan "bitti" diyen kodlama ajanları ne kadar haklı?](https://huggingface.co/blog/serkanpeker/kanitsiz-bitti)
+(in Turkish; the English version follows).
 
 ## Files and columns
 
@@ -50,20 +54,20 @@ number with its source are at [github.com/speker/done-claims](https://github.com
 |---|---:|---|
 | `phase1_swe_agent` | 80,036 | a trajectory of nebius/SWE-agent-trajectories (revision `68195a1`); the analysis keeps the 51,087 whose exit status is `submitted` |
 | `phase2a_claude_code` | 1,500 | a Claude Code trial on SWE-bench Verified in phase 2a, reported as a description only |
-| `phase2b_stage1` | 1,500 | a trial of pre-registered stage 1: 500 issues, 3 attempts each |
+| `phase2b_stage1` | 1,500 | a trial of stage 1: 500 issues, 3 attempts each |
 | `phase2b_stage2` | 1,176 | a trial of stage 2: the 147 issues with an `unverified` stage-1 attempt, 8 more attempts each |
 
 `results/` holds the summaries, the phase 2b analysis (`results/phase2b/analysis.json`) and every audit file, in the
 same layout as the GitHub repository. The columns:
 
-- `category`: `unverified` (nothing ran after the last product edit), `ran_failing` (the last run after it failed),
+- `category`: `unverified` (no test or script ran after the last product edit), `ran_failing` (the last run after it failed),
   `ran_passing` (the last run after it showed no failure signal), `no_product_change`; phase 1 also has
   `undetermined` (product files changed, but no edit to them is visible). The full definitions of a product file,
   an edit, a run and a failure are in RESULTS.md.
 - `target`: whether the issue was resolved. Phase 1 takes the dataset's label (the final patch passed the tests of
   the linked pull request); phase 2 sets it when the SWE-bench verifier's reward is 1.
 - `n_steps`, `n_product_files`, `touched_tests` (a patched or edited file is a test file), `last_product_edit` (step index), `runs_after_edit`,
-  `tests_after_edit`, `last_outcome` (`pass`, `fail`, `unknown`, empty when nothing ran), `claims_success` (the
+  `tests_after_edit`, `last_outcome` (`pass`, `fail`, `unknown`, empty when no test or script ran), `claims_success` (the
   closing message asserts success without a hedge or a negation, by the lexicon in `doneclaims/rules.py`).
 - Phase 1 only: `shard` and `row` (position in the source Parquet shards), `instance_id`, `model_name` (the
   SWE-agent action model), `exit_status`.
@@ -74,13 +78,13 @@ same layout as the GitHub repository. The columns:
 ## How the categories were checked
 
 Each phase was audited on two random samples of 40 rows (10 per category in phase 2). In phase 2b, two auditor agents built on
-different model families read the 80 stage-1 rows independently and the agent that wrote the classifier re-read the
+different model families read each of the 80 stage-1 rows separately and the agent that wrote the classifier re-read the
 rows they disputed: 78 are right, one is wrong (a file under `django/test/`, which ships with Django, was taken for a
 test) and one is ambiguous. Instead of a human re-check, a jury of four language models from different families
 re-read all 80 rows without seeing those verdicts. All four agreed with the final verdict on 79 rows, the wrong
 one included; on the ambiguous row two called the classifier right, one wrong and one ambiguous. No human has
-re-checked the rows. Fixing the `django/test/` rule moves 3 of
-the 2,540 completed phase 2b trials and leaves the pre-registered estimate unchanged.
+re-checked the rows, so these are consistency checks by models, not independent validation. Fixing the
+`django/test/` rule moves 3 of the 2,540 completed phase 2b trials and leaves the H1 estimate unchanged.
 
 ## Limitations
 
@@ -90,6 +94,10 @@ the 2,540 completed phase 2b trials and leaves the pre-registered estimate uncha
 - Categories are computed by rules. A script that prints a wrong answer without raising counts as `ran_passing`.
 - The 147 phase 2b issues are those where the agent skipped verification at least once in stage 1, so the pooled
   estimate describes those issues.
+- The `test` and `testing` subpackage error found in the phase 2b audit also applies to phases 1 and 2a. With the
+  fixed rule, 18 of the 51,087 phase 1 submissions change category and the phase 1 odds ratio stays at 0.68 (0.63
+  to 0.74); in phase 2a, 2 of the 1,469 completed trials change and it becomes 0.94 (0.39 to 2.25, 23 issues). The
+  numbers on this card keep the frozen rule.
 
 ## License, sources and citation
 
@@ -99,7 +107,7 @@ instance ids and verifier results; that dataset's card declares no license, and 
 
 ```bibtex
 @misc{peker2026doneclaims,
-  title  = {done-claims: coding agents that submit without running anything after their last edit},
+  title  = {done-claims: coding agents that submit without running a test or script after their last edit},
   author = {Peker, Serkan},
   year   = {2026},
   url    = {https://huggingface.co/datasets/serkanpeker/done-claims}

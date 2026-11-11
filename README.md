@@ -1,20 +1,25 @@
 # done-claims
 
-Coding agents often submit a change without running anything after their last edit. This repository
-measures how often that happens and how it relates to whether the change resolves the issue.
+This repository measures how often coding agents submit a change without running a test or script after
+their last edit, and how that relates to whether the change resolves the issue.
 
 - Phase 1 looks at 51,087 submitted SWE-agent runs from
   [nebius/SWE-agent-trajectories](https://huggingface.co/datasets/nebius/SWE-agent-trajectories).
-  In 39.4% of the submissions that changed product code, nothing ran after the last edit. Within the
-  same issue, their odds of resolving it were 0.68 times those of submissions whose last run after the
-  edit showed no failure (95% CI 0.63 to 0.74, 598 issues).
-- Phase 2b is pre-registered: Claude Code driven by gpt-oss-120b on SWE-bench Verified, 2,676 trials in
-  two stages. Over the 147 issues where the agent skipped verification at least once, the within-issue
-  odds ratio is 0.55 (95% CI 0.37 to 0.82, 73 issues), below 1 as the pre-registered rule requires.
+  In 39.4% of the submissions that changed product code, no test or script ran after the last edit.
+  Within the same issue, their odds of resolving it were 0.68 times those of submissions whose last run
+  after the edit showed no failure (95% CI 0.63 to 0.74, 598 issues).
+- Phase 2a ran Claude Code driven by gpt-oss-120b on SWE-bench Verified, 1,500 trials. The within-issue
+  odds ratio, 1.04 (95% CI 0.42 to 2.55, 22 issues), is inconclusive.
+- Phase 2b repeats it in two stages, 2,676 trials, with its hypothesis and decision rule set in a dated
+  plan. Over the 147 issues where the agent skipped verification at least once, the within-issue odds
+  ratio is 0.55 (95% CI 0.37 to 0.82, 73 issues); the upper end is below 1, which is the plan's rule.
 
-[RESULTS.md](projects/done-claims/RESULTS.md) gives every number with its source, and [PLAN.md](projects/done-claims/PLAN.md) is the
-pre-registration, written before each stage ran. The per-trajectory and per-trial results are also on
-the Hugging Face Hub as [serkanpeker/done-claims](https://huggingface.co/datasets/serkanpeker/done-claims). No trajectory or transcript text is included.
+[RESULTS.md](projects/done-claims/RESULTS.md) gives every number with its source. [PLAN.md](projects/done-claims/PLAN.md) is the plan,
+dated before each stage ran; it is a file in this repository, not an entry in a public registry. The
+per-trajectory and per-trial results are also on the Hugging Face Hub as [serkanpeker/done-claims](https://huggingface.co/datasets/serkanpeker/done-claims).
+No trajectory or transcript text is included. The write-up is the article
+[Test ya da betik çalıştırmadan "bitti" diyen kodlama ajanları ne kadar haklı?](https://huggingface.co/blog/serkanpeker/kanitsiz-bitti)
+(in Turkish; the English version follows).
 
 ## Reproduce
 

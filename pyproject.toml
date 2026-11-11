@@ -1,7 +1,7 @@
 [project]
 name = "done-claims"
 version = "1.0.0"
-description = "How often coding agents submit without running anything after their last edit"
+description = "How often coding agents submit without running a test or script after their last edit"
 requires-python = ">=3.12"
 dependencies = [
     "huggingface-hub==2.4.0",

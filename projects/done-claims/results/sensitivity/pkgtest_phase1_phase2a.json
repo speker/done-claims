@@ -1,0 +1,41 @@
+{
+  "rule": "changed",
+  "pattern": "^(?:(?:lib|src)/)?[A-Za-z_]\\w*/(?:test|testing)/",
+  "code_sha256": "c0b6a8c4cc16d230c448af82ad223cafbcd0f7d26d579cc3d18747b57c136420",
+  "phase1": {
+    "submitted": 51087,
+    "moved": {
+      "no_product_change -> ran_failing": 3,
+      "no_product_change -> ran_passing": 6,
+      "no_product_change -> unverified": 3,
+      "ran_failing -> unverified": 3,
+      "ran_passing -> unverified": 1,
+      "undetermined -> ran_failing": 2
+    },
+    "within_issue": {
+      "comparison": "unverified vs ran_passing",
+      "odds_ratio": 0.6819030112701463,
+      "ci95": [
+        0.6251687366523165,
+        0.7437859405274376
+      ],
+      "informative_strata": 598
+    }
+  },
+  "phase2a": {
+    "completed": 1469,
+    "moved": {
+      "no_product_change -> unverified": 1,
+      "ran_passing -> unverified": 1
+    },
+    "within_issue": {
+      "comparison": "unverified vs ran_passing",
+      "odds_ratio": 0.9354838709677418,
+      "ci95": [
+        0.3892268753506542,
+        2.248380387537183
+      ],
+      "informative_strata": 23
+    }
+  }
+}

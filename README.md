@@ -18,8 +18,7 @@ their last edit, and how that relates to whether the change resolves the issue.
 dated before each stage ran; it is a file in this repository, not an entry in a public registry. The
 per-trajectory and per-trial results are also on the Hugging Face Hub as [serkanpeker/done-claims](https://huggingface.co/datasets/serkanpeker/done-claims).
 No trajectory or transcript text is included. The write-up is the article
-[Test ya da betik çalıştırmadan "bitti" diyen kodlama ajanları ne kadar haklı?](https://huggingface.co/blog/serkanpeker/kanitsiz-bitti)
-(in Turkish; the English version follows).
+[Coding agents that submit without running a test or script](https://huggingface.co/blog/serkanpeker/done-claims) ([Türkçe](https://huggingface.co/blog/serkanpeker/kanitsiz-bitti)).
 
 ## Reproduce
 
